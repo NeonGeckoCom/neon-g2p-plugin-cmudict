@@ -8,16 +8,5 @@ class CmuDictPlugin(Grapheme2PhonemePlugin):
         if lang.lower().startswith("en"):
             phones = pronouncing.phones_for_word(word)
             if phones:
-                return phones[0] \
-                    .replace("9", "")\
-                    .replace("8", "")\
-                    .replace("7", "")\
-                    .replace("6", "")\
-                    .replace("5", "")\
-                    .replace("4", "")\
-                    .replace("3", "")\
-                    .replace("2", "")\
-                    .replace("1", "")\
-                    .replace("0", "").split(" ")
+                return phones[0].split(" ")
         return None
-
