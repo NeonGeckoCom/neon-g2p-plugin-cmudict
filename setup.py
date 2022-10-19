@@ -3,6 +3,8 @@ from setuptools import setup
 
 
 PLUGIN_ENTRY_POINT = 'neon-g2p-cmudict-plugin=neon_g2p_cmudict_plugin:CmuDictPlugin'
+CONFIG_ENTRY_POINT = 'neon-g2p-cmudict-plugin.config=neon_g2p_cmudict_plugin:CmuDictConfig'
+
 setup(
     name='neon-g2p-cmudict-plugin',
     version='0.0.1',
@@ -14,5 +16,6 @@ setup(
     packages=['neon_g2p_cmudict_plugin'],
     zip_safe=True,
     keywords='mycroft plugin utterance phoneme',
-    entry_points={'neon.plugin.g2p': PLUGIN_ENTRY_POINT}
+    entry_points={'ovos.plugin.g2p': PLUGIN_ENTRY_POINT,
+                  'ovos.plugin.g2p.config': CONFIG_ENTRY_POINT}
 )
